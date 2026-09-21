@@ -98,7 +98,7 @@ const TEAM = [
     experience: "15+ Years",
     image: okpakoImg,
     bar: "Nigerian Bar Association (NBA), IBA",
-    bio: "Lead solicitor on multi-billion Naira syndicated facility drawdowns, state asset privatizations, and landmark appellate dispute resolutions.",
+    bio: "Aghogho, called to the Nigerian Bar in 2008, holds a Masters degree in International Maritime/ Commercial Law from Swansea University, United Kingdom. He has over the years developed solid skills in negotiations, risk management, government relations, transaction structuring, enterprise and start-ups. He is a result driven lawyer with commercial nouse and awesome negotiation and transactional skills. He has advised in plethora of business and commercial transactions cutting across electricity, oil and gas, agriculture, debt recovery, capital raise, etc. He has also participated as a delegate and resource person/ speaker in both local and international seminars, summits and conferences. Aghogho is a member of the Nigerian Bar Association (NBA), Nigerian Maritime Law Association (NMLA), etc.",
   },
   {
     name: "Tamuno Amiesimaka, Esq.",
@@ -107,7 +107,7 @@ const TEAM = [
     experience: "10+ Years",
     image: tamunoImg,
     bar: "Nigerian Bar Association (NBA), MLA",
-    bio: "Specialist in cabotage law, vessel caveat applications, international charterparty negotiations, and early-stage founder venture advisory.",
+    bio: "Tamuno holds a Masters degree in International Maritime/ Commercial Law from Swansea University, United Kingdom, and has over the years developed skills in Alternative Dispute Resolution and Human Resources Management. He is also a Lecturer at the Department of Business Law, Faculty of Law at the Rivers State University. Tamuno is a member of the Nigerian Bar Association (NBA), Nigerian Maritime Law Association (NMLA), Commonwealth Association of Lawyers, and the Mediation Training Institute (Nigeria). He is also a certified Project Manager (PRINCE2(Associate) with experience in the AGILE/Scrum method of Project Management). During his stint as a Senior Assistant to the Attorney General & Justice in Rivers State (2015-2018), our Tamuno was deeply involved in all litigation, contract negotiations, and legal drafting connected to the Rivers State Government. Prior to that, Tamuno worked with the Legal Aid Council of Nigeria and contributed immensely to the Port Harcourt Prisons decongestion. He is currently pursuing a Doctorate degree in Arbitration and International Trade Law at the Rivers State University.",
   },
   {
     name: "Menyazino O. Egware, Esq.",
@@ -116,7 +116,7 @@ const TEAM = [
     experience: "7+ Years",
     image: menyazinoImg,
     bar: "Nigerian Bar Association (NBA)",
-    bio: "Advising enterprise corporations and emerging ventures on regulatory clearances, trademark portfolios, and cross-border commercial pacts.",
+    bio: "Egware holds a degree in law from Delta State University Delta Nigeria, and has over the years developed skills in criminal and civil litigation, Legal Drafting and alternative dispute resolution (ADR). Egware is a member of the Nigerian Bar Association (NBA), and also an associate member of the Legal Aid Council of Nigeria Rivers State. As an Attorney, Egware has been involved in litigation, negotiations and legal drafting for the Firm. Prior to joining the firm, Egware worked with the Law Firm of Sterling Law Alliance and there after the firm of Owubokiri & Co where he worked in the capacity of Head of Chambers and contributed immensely to the Administration of the firm until he left."
   },
 ];
 
