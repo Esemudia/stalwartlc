@@ -1,0 +1,10 @@
+{
+  "description": "This platform enables clients to track their cases, view progress reports, and manage billables while allowing admins to upload case details efficiently.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

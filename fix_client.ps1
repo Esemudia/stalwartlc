@@ -1,0 +1,1 @@
+(Get-Content src/pages/ClientPortal/ClientPortal.tsx) -replace "import \{.*cases.*\} from \"../../data\";", 'import { fetchMatters, fetchDocuments, uploadDocument } from "../../api";' | Set-Content src/pages/ClientPortal/ClientPortal.tsx
