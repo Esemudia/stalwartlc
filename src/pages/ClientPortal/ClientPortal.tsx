@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { clearSession } from "../../auth";
 import { fetchMatters, fetchDocuments, uploadDocument } from "../../api";
+import logo from "../../assets/logo.png";
 
 const fmt = (n: number) => new Intl.NumberFormat("en-NG", { style: "currency", currency: "NGN", maximumFractionDigits: 0 }).format(n);
 const fmtTs = (ts: string) => new Date(ts).toLocaleString("en-GB", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
@@ -66,8 +67,7 @@ export default function ClientPortal() {
       <header className="flex items-center justify-between px-6 lg:px-10 h-16 flex-shrink-0"
         style={{ background: "var(--card)", borderBottom: "1px solid var(--border)" }}>
         <div className="flex items-center gap-3">
-          <div className="w-7 h-7 flex items-center justify-center text-xs font-bold"
-            style={{ background: "var(--primary)", color: "var(--primary-foreground)" }}>SLC</div>
+          <img src={logo} alt="Stalwart Law Consult" className="h-7 w-auto object-contain" />
           <span className="font-serif text-sm font-semibold">Stalwart Law Consult</span>
           <span className="hidden lg:block text-xs font-mono px-2 py-0.5"
             style={{ background: "var(--secondary)", color: "var(--muted-foreground)", marginLeft: "4px" }}>

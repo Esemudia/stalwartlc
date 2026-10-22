@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import { saveSession, portalForRole, type UserRole } from "../../auth";
 import { login } from "../../api";
+import logo from "../../assets/logo.png";
 
 interface LocationState {
   from?: string;
@@ -98,11 +99,7 @@ export default function LoginPage() {
     }
   };
 
-  const handleDemoFill = () => {
-    setEmail(demo.email);
-    setPassword("demo1234");
-    setError("");
-  };
+
 
   return (
     <div
@@ -136,13 +133,19 @@ export default function LoginPage() {
         {/* Branding + role list */}
         <div className="relative z-10">
           <div className="flex items-center gap-3 mb-8">
-            <div
-              className="w-8 h-8 flex items-center justify-center text-xs font-bold rounded-sm"
-              style={{ background: "var(--accent)", color: "var(--primary)" }}
-            >
-              SLC
+            <img
+              src={logo}
+              alt="Stalwart Law Consult"
+              className="h-10 w-auto object-contain filter drop-shadow-[0_2px_8px_rgba(213,170,109,0.3)]"
+            />
+            <div className="border-l border-white/20 pl-3">
+              <span className="block font-serif text-lg font-bold tracking-wide text-white">
+                STALWART
+              </span>
+              <span className="block text-[10px] uppercase tracking-[0.25em] text-[#D5AA6D] font-medium">
+                Law Consult • Access Portal
+              </span>
             </div>
-            <span className="font-serif text-base font-semibold" style={{ color: "var(--accent)" }}>Stalwart Law Consult</span>
           </div>
 
           <h2
@@ -331,17 +334,7 @@ export default function LoginPage() {
               />
             </div>
 
-            <div className="flex items-center justify-between">
-              <button
-                type="button"
-                onClick={handleDemoFill}
-                className="text-xs transition-colors"
-                style={{ color: "var(--muted-foreground)" }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "var(--primary)")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "var(--muted-foreground)")}
-              >
-                Fill demo credentials
-              </button>
+            <div className="flex items-center justify-end">
               <button type="button" className="text-xs" style={{ color: "var(--primary)" }}>
                 Forgot password?
               </button>

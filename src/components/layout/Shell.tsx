@@ -1,5 +1,6 @@
 import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
 import { getSession, clearSession } from "../../auth";
+import logo from "../../assets/logo.png";
 
 const navItems = [
     { id: "dashboard", label: "Dashboard", path: "/internal/dashboard", icon: "📊" },
@@ -30,11 +31,20 @@ export default function Shell() {
         <div className="flex h-screen overflow-hidden bg-[var(--background)] text-[var(--foreground)]">
             {/* Premium Navy Sidebar */}
             <aside className="w-64 flex-shrink-0 flex flex-col bg-[var(--primary)] text-white shadow-xl z-20">
-                <div className="h-16 flex items-center px-6 border-b border-white/10 shrink-0 gap-3">
-                    <div className="w-8 h-8 flex items-center justify-center text-xs font-bold bg-[var(--accent)] text-[var(--primary)] rounded-sm shadow-sm">
-                        SLC
+                <div className="h-16 flex items-center px-5 border-b border-white/10 shrink-0 gap-3">
+                    <img
+                        src={logo}
+                        alt="Stalwart Law Consult"
+                        className="h-9 w-auto object-contain filter drop-shadow-[0_2px_6px_rgba(213,170,109,0.3)]"
+                    />
+                    <div className="flex flex-col">
+                        <span className="font-serif text-base font-bold tracking-wide text-white leading-tight">
+                            STALWART
+                        </span>
+                        <span className="text-[9px] uppercase tracking-[0.2em] text-[var(--accent)] font-semibold leading-tight">
+                            Law Consult
+                        </span>
                     </div>
-                    <span className="font-serif text-lg font-semibold tracking-wide text-[var(--accent)]">StalwartLC</span>
                 </div>
 
                 <div className="flex-1 overflow-y-auto py-6">

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { clearSession } from "../../auth";
 import { cases as initialCases, staffMembers as initialStaff, type Case, type CaseStatus, type StaffMember, type StaffRole } from "../../data";
+import logo from "../../assets/logo.png";
 
 const statusColors: Record<CaseStatus, { bg: string; text: string; label: string }> = {
   active: { bg: "rgba(34,197,94,0.1)", text: "#22c55e", label: "Active" },
@@ -101,10 +102,7 @@ export default function SuperAdminPortal() {
       <header className="flex items-center justify-between px-6 lg:px-10 h-16 flex-shrink-0"
         style={{ background: "var(--card)", borderBottom: "1px solid var(--border)" }}>
         <div className="flex items-center gap-3">
-          <div className="w-7 h-7 flex items-center justify-center text-xs font-bold"
-            style={{ background: "var(--primary)", color: "var(--primary-foreground)" }}>
-            SLC
-          </div>
+          <img src={logo} alt="Stalwart Law Consult" className="h-7 w-auto object-contain" />
           <span className="font-serif text-sm font-semibold">Stalwart Law Consult</span>
           <span className="hidden lg:block text-xs font-mono px-2 py-0.5 ml-1"
             style={{ background: "rgba(201,168,76,0.15)", color: "var(--primary)" }}>

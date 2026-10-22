@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Preloader from "../../components/Preloader";
 import logoIcon from "../../assets/logo.png";
 import logoFull from "../../assets/logo2.png";
 import okpakoImg from "../../assets/okpako.jpg";
@@ -169,6 +170,7 @@ const TESTIMONIALS = [
 ];
 
 export default function HomePage() {
+  const [isLoading, setIsLoading] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activePractice, setActivePractice] = useState(PRACTICE_AREAS[0].id);
@@ -203,10 +205,12 @@ export default function HomePage() {
   };
 
   return (
-    <div
-      className="min-h-screen selection:bg-[var(--accent)] selection:text-[var(--primary)]"
-      style={{ background: "var(--background)", color: "var(--foreground)" }}
-    >
+    <>
+      {isLoading && <Preloader onComplete={() => setIsLoading(false)} />}
+      <div
+        className="min-h-screen selection:bg-[var(--accent)] selection:text-[var(--primary)]"
+        style={{ background: "var(--background)", color: "var(--foreground)" }}
+      >
       {/* ── LUXURY ROYAL NAVY NAVIGATION BAR ──────────────────────────────── */}
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "py-3 shadow-lg" : "py-4"
@@ -1551,8 +1555,19 @@ export default function HomePage() {
           className="max-w-7xl mx-auto px-6 lg:px-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] font-mono text-slate-400"
           style={{ borderTop: "1px solid rgba(255, 255, 255, 0.1)" }}
         >
-          <div>
-            © {new Date().getFullYear()} Stalwart Law Consult. All rights reserved.
+          <div className="flex items-center gap-3">
+            <span>© {new Date().getFullYear()} Stalwart Law Consult. All rights reserved.</span>
+            <span className="text-slate-600">·</span>
+            <button
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+                setIsLoading(true);
+              }}
+              className="text-slate-400 hover:text-[var(--accent)] underline transition-colors cursor-pointer text-[10px]"
+              title="Replay intro animation"
+            >
+              Replay Intro
+            </button>
           </div>
           <div className="flex gap-6">
             <span>Privileged & Confidential</span>
@@ -1561,5 +1576,6 @@ export default function HomePage() {
         </div>
       </footer>
     </div>
+    </>
   );
 }
